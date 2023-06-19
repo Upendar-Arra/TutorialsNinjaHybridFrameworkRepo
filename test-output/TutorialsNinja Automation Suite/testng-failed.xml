@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TutorialsNinja Automation Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.tutorialsninja.qa.listeners.MyListeners"/>
+  </listeners>
+  <test thread-count="5" name="TutorialsNinja Test Cases(failed)">
+    <classes>
+      <class name="com.tutorialsninja.qa.testcases.Register">
+        <methods>
+          <include name="verifyRegisteringAnAccountByProvidingAllTheFields"/>
+          <include name="verifyRegisteringAnAccountWithAlreadyExistingEmailAddress"/>
+          <include name="verifyRegisteringAnAccountWithoutFillingAnyDetails"/>
+          <include name="setup"/>
+          <include name="verifyRegisteringAnAccountWithMandatoryFields"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tutorialsninja.qa.testcases.Register -->
+      <class name="com.tutorialsninja.qa.testcases.Login">
+        <methods>
+          <include name="verifyLoginWithInvalidUsernameValidPassword"/>
+          <include name="tearDown"/>
+          <include name="verifyLoginWithoutProvidingAnyCredentials"/>
+          <include name="setup"/>
+          <include name="verifyLoginWithInvalidCredentials"/>
+          <include name="verifyLoginWithValidUsernameInvalidPassword"/>
+          <include name="verifyLoginWithValidCredentials"/>
+        </methods>
+      </class> <!-- com.tutorialsninja.qa.testcases.Login -->
+      <class name="com.tutorialsninja.qa.testcases.Search">
+        <methods>
+          <include name="verifySearchFunctionalityWithInvalidProduct"/>
+          <include name="verifySearchFunctionalityWithValidProduct"/>
+          <include name="verifySearchFunctionalityWithoutProvidingAnyProductName"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tutorialsninja.qa.testcases.Search -->
+    </classes>
+  </test> <!-- TutorialsNinja Test Cases(failed) -->
+</suite> <!-- Failed suite [TutorialsNinja Automation Suite] -->
